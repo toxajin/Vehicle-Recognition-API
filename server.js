@@ -1,7 +1,7 @@
-const express = require("express");
-const bcrypt = require("bcryptjs");
-const cors = require('cors');
-const handleRegister = require("./controlers/register.js");
+const {express} = require("express");
+const {bcrypt} = require("bcryptjs");
+const {cors} = require('cors');
+const {handleRegister} = require("./controlers/register.js");
 const {handleSignin} = require("./controlers/signin.js");
 const {handleProfileGet} = require("./controlers/profile.js");
 const {handleApiCall, handleImage} = require("./controlers/image.js");
