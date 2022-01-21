@@ -9,7 +9,7 @@ const {db} = require("./controlers/db.js");
 const app = express();
 app.use(express.json());
 app.use(cors())
-app.get('/', (req,res) => {res.json("It's working!")})
+app.get('/', (req,res) => {res.send("It's working!")})
 app.get('/profile/:id', (req, res) => {handleProfileGet(req,res,db)})
 app.put('/image', (req, res) => {handleImage(req,res,db)})
 app.post('/imageurl', (req, res) => {handleApiCall(req,res)})
