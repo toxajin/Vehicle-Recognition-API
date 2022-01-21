@@ -8,6 +8,7 @@ const {handleApiCall, handleImage} = require("./controlers/image.js");
 const {db} = require("./controlers/db.js");
 const app = express();
 app.use(express.json());
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
 app.use(cors())
 app.get('/', (req,res) => {res.send("It's working!")})
 app.get('/profile/:id', (req, res) => {handleProfileGet(req,res,db)})
