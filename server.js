@@ -15,6 +15,6 @@ app.put('/image', (req, res) => {handleImage(req,res,db)})
 app.post('/imageurl', (req, res) => {handleApiCall(req,res)})
 app.post('/signin',handleSignin(db,bcrypt))
 app.post('/register',(req, res) => {handleRegister(req,res,db,bcrypt)})
-app.listen(3000,()=> {
-    console.log('app is running')
+app.listen(process.env.PORT || 3000,()=> {
+    console.log(`app is running on port ${process.env.PORT}`)
 })
